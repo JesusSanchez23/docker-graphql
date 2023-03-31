@@ -27,13 +27,13 @@ jobs:
         echo "Fin de auth"
         
     - name: Build Docker Image
-      run:
+      run: |
         docker build -t jasanchez23/docker-graphql:0.0.2 .
         docker build -t jasanchez23/docker-graphql:latest .
         
         
     - name: Push Docker Image
-      run:
+      run: |
         docker push  jasanchez23/docker-graphql:0.0.2
         docker push  jasanchez23/docker-graphql:latest
         
